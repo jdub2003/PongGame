@@ -16,24 +16,24 @@ public class PaddleControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(0f, 0.01f, 0f);
-            if (transform.position.y >= 3.69)
+            transform.Translate(0f, 0.04f, 0f);
+            if (transform.position.y >= 2.66)
             {
                 var x = transform.position.x;
-                transform.position = new Vector3(x, 3.69f, 0f);
+                transform.position = new Vector3(x, 2.66f, 0f);
             }
           
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(0f, -0.01f, 0f);
-            if (transform.position.y <= -3.69)
+            transform.Translate(0f, -0.04f, 0f);
+            if (transform.position.y <= -2.66)
             {
                 var x = transform.position.x;
-                transform.position = new Vector3(x, -3.69f, 0f);
+                transform.position = new Vector3(x, -2.66f, 0f);
             }
         }
         //max y 3.69 min -3.69
-        Debug.Log(transform.position.y);
+        //Debug.Log(transform.position.y);
     }
 }
