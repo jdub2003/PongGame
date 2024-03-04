@@ -16,10 +16,10 @@ public class PaddleControl2 : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(0f, 0.04f, 0f);
-            if (transform.position.y >= 2.23)
+            if (transform.position.y >= 3.16)
             {
                 var x = transform.position.x;
-                transform.position = new Vector3(x, 2.23f, 0f);
+                transform.position = new Vector3(x, 3.16f, 0f);
             }
 
 
@@ -27,11 +27,20 @@ public class PaddleControl2 : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(0f, -0.04f, 0f);
-            if (transform.position.y <= -2.8)
+            if (transform.position.y <= -3.38)
             {
                 var x = transform.position.x;
-                transform.position = new Vector3(x, -2.8f, 0f);
+                transform.position = new Vector3(x, -3.38f, 0f);
             }
         }
     }
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameManager gm;
+        gm = FindAnyObjectByType<GameManager>();
+        if (collision.CompareTag("Ball") == true)
+        {
+            gm.ScoreR = gm.ScoreR + 1;
+        }
+    }*/
 }

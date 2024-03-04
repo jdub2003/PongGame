@@ -17,23 +17,32 @@ public class PaddleControl : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(0f, 0.04f, 0f);
-            if (transform.position.y >= 2.66)
+            if (transform.position.y >= 3.27)
             {
                 var x = transform.position.x;
-                transform.position = new Vector3(x, 2.66f, 0f);
+                transform.position = new Vector3(x, 3.27f, 0f);
             }
           
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(0f, -0.04f, 0f);
-            if (transform.position.y <= -2.66)
+            if (transform.position.y <= -3.27)
             {
                 var x = transform.position.x;
-                transform.position = new Vector3(x, -2.66f, 0f);
+                transform.position = new Vector3(x, -3.27f, 0f);
             }
         }
         //max y 3.69 min -3.69
         //Debug.Log(transform.position.y);
     }
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameManager gm;
+        gm = FindAnyObjectByType<GameManager>();
+        if (collision.CompareTag("Ball") == true)
+        {
+            gm.ScoreL = gm.ScoreL + 1; 
+        }
+    }*/
 }
